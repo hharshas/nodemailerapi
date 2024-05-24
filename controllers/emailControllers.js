@@ -19,7 +19,7 @@ const sendEmail = expressAsyncHandler(async (req, res) => {
 
   var mailOptions = {
     from: process.env.SMTP_MAIL,
-    to: "hello@headshot.energy",
+    to: "hs1800002@gmail.com",
     subject: subject,
     text: message,
   };
