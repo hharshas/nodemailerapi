@@ -17,11 +17,14 @@ const sendEmail = expressAsyncHandler(async (req, res) => {
   const { email, subject, message } = req.body;
   console.log(email, subject, message);
 
+  // Enhance the message to include the email
+  const enhancedMessage = `Email: ${email}\n\n${message}`;
+
   var mailOptions = {
     from: process.env.SMTP_MAIL,
     to: "hello@headshot.energy",
     subject: subject,
-    text: message,
+    text: enhancedMessage,
   };
 
   transporter.sendMail(mailOptions, function (error, info) {

@@ -50,4 +50,3 @@ const keepServerActive = () => {
 // Send a POST request every 3 seconds (3000 milliseconds)
 setInterval(keepServerActive, 3000);
 
-
